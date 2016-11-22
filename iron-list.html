@@ -1026,7 +1026,7 @@ will only render 20.
         props[this.selectedAs] = true;
         props.tabIndex = true;
         this._instanceProps = props;
-        this._userTemplate = Polymer.dom(this).querySelector('template');
+        this._userTemplate = this.queryEffectiveChildren("template");
 
         if (this._userTemplate) {
           this.templatize(this._userTemplate);
